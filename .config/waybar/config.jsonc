@@ -1,0 +1,80 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 36,
+  "spacing": 0,
+
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "custom/network-traffic",
+    "memory",
+    "cpu",
+    "pulseaudio",
+    "clock",
+    "tray"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "I",
+      "2": "II",
+      "3": "III",
+      "4": "IV",
+      "5": "V"
+    },
+    "all-outputs": true,
+    "persistent-workspaces": {
+      "*": [ 1, 2, 3, 4, 5 ]
+    }
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 40,
+    "separate-outputs": true
+  },
+
+  "custom/network-traffic": {
+    "exec": "~/.config/waybar/scripts/network-traffic.sh",
+    "tooltip": false
+  },
+
+  "memory": {
+    "interval": 1,
+    "format": "<span color='#a6e3a1'>RAM</span> {percentage}%",
+    "tooltip": false
+  },
+
+  "cpu": {
+    "interval": 1,
+    "format": "<span color='#89b4fa'>CPU</span> {usage}%",
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "<span color='#f5c2e7'>VOL</span> {volume}%",
+    "format-muted": "<span color='#6c7086'>VOL MUT</span>",
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/volume --toggle",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "~/.config/waybar/scripts/volume --inc",
+    "on-scroll-down": "~/.config/waybar/scripts/volume --dec",
+    "scroll-step": 5
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip": false
+  },
+
+  "tray": {
+    "icon-size": 20,
+    "spacing": 8
+  }
+}
