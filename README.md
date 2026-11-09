@@ -25,7 +25,6 @@ Run from the repository root. This copies into an existing `~/.config` or `~/.vi
 cp -r .config .vim ~/
 cp -v .bashrc .bash_profile .vimrc .Xresources ~/
 chmod +x ~/.config/hypr/xdph.sh ~/.config/waybar/scripts/*
-sed -i "s?username?$USER?g" ~/.config/wpaperd/config.toml
 ```
 
 ---
@@ -36,4 +35,4 @@ sed -i "s?username?$USER?g" ~/.config/wpaperd/config.toml
 Hyprland
 ```
 
-`Super + Return` opens a terminal and `Super + D` opens the launcher. `Super + Q` closes the focused window, `Super + F` maximizes it, and `Super + Alt + Q` exits Hyprland. `Super + 1` through `Super + 5` switch workspaces; add `Shift` to send the focused window there instead. `Super + S` toggles the scratchpad. `Print` saves a screenshot of all outputs to `~` with grim. wpaperd rotates a random wallpaper from `~/.config/wallpaper` every 30 minutes.
+`Super + Return` opens a terminal and `Super + D` opens the launcher. `Super + Q` closes the focused window, `Super + F` maximizes it, and `Super + Alt + Q` exits Hyprland. `Super + 1` through `Super + 5` switch workspaces; add `Shift` to send the focused window there instead. `Super + S` toggles the scratchpad. `Print` saves a screenshot of all outputs to `~` with grim.
